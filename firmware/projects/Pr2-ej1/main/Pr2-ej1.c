@@ -40,18 +40,33 @@
 
 /*==================[macros and definitions]=================================*/
 #define CONFIG_BLINK_PERIOD1 1000
-#define CONFIG_BLINK_PERIOD 500
+#define CONFIG_BLINK_PERIOD 100
 
 
 /*==================[internal data definition]===============================*/
 bool hold=false;
 bool encendido = true;
-int16_t distancia = 0;	
-int8_t teclas;
+uint16_t distancia = 0;	
+
 
 /*==================[internal functions declaration]=========================*/
-void valorteclas()
+static void medirdistancia(void *pvParameter)
 {
+	while (true)
+	{
+		if(encendido)
+			{
+				distancia=HcSr04ReadDistanceInCentimeters();
+			}		
+		vTaskDelay(CONFIG_BLINK_PERIOD1/portTICK_PERIOD_MS);
+	}
+	
+}
+/// @brief mide la distancia
+
+static void valorteclas(void *pvParameter)
+{
+	uint8_t teclas;
 	while(true)
 	{
 		teclas=SwitchesRead();
@@ -65,74 +80,76 @@ void valorteclas()
 			hold=!hold;
 			break;
 		}
-	vTaskDelay(CONFIG_BLINK_PERIOD1/portTICK_PERIOD_MS);	
+	vTaskDelay(CONFIG_BLINK_PERIOD/portTICK_PERIOD_MS);	
 	}
 }
 /// @brief modifica el valor de las teclas
-void medirdistancia()
-{
-	while (true)
-	{
-		if(encendido)
-			{distancia=HcSr04ReadDistanceInCentimeters;}
-		vTaskDelay(CONFIG_BLINK_PERIOD1/portTICK_PERIOD_MS);
-	}
-	
-}
-/// @brief mide la distancia
 
-void mostrarDistancia()
+void Leds()
 {
+	
+			if (distancia < 10)
+			{
+				LedOff(LED_1);
+				LedOff(LED_2);
+				LedOff(LED_3);
+			}
+			if (distancia >= 10 && distancia < 20)
+			{
+				LedOn(LED_1);
+				LedOff(LED_2);
+				LedOff(LED_3);
+			}
+				if (distancia >= 20 && distancia < 30)
+			{
+				LedOn(LED_1);
+				LedOn(LED_2);
+				LedOff(LED_3);
+			}
+				if (distancia >= 30)
+			{
+				LedOn(LED_1);
+				LedOn(LED_2);
+				LedOn(LED_3);
+	
+			}
+}
+
+/// @brief enciende los leds segun la distancia medida
+
+static void mostrarDistancia(void *pvParameter)
+{
+	/*int aux=HcSr04ReadDistanceInCentimeters;*/
 	while (true)
-	{
-		if(encendido || hold)
-			{LcdItsE0803Write(distancia);}
+	{	
+		if(encendido)
+			{
+				Leds();
+			if (!hold)
+				{
+					LcdItsE0803Write(distancia);
+				}
+			}
+			 else 
+				{
+					LcdItsE0803Off();
+					LedsOffAll();
+				}
 		vTaskDelay(CONFIG_BLINK_PERIOD1/portTICK_PERIOD_MS);
 	}
 }
 /// @brief muestra la distancia
 
-void Leds()
-{	while(true)
-	{	
-		if (distancia < 10)
-		{
-			LedOff(LED_1);
-			LedOff(LED_2);
-			LedOff(LED_3);
-		}
-		if (distancia > 10 && distancia < 20)
-		{
-			LedOn(LED_1);
-			LedOff(LED_2);
-			LedOff(LED_3);
-		}
-			if (distancia > 20 && distancia < 30)
-		{
-			LedOn(LED_1);
-			LedOn(LED_2);
-			LedOff(LED_3);
-		}
-			if (distancia >30)
-		{
-			LedOn(LED_1);
-			LedOn(LED_2);
-			LedOn(LED_3);
-		}
-NewFunction();
-	}
-}
 /*==================[external functions definition]==========================*/
-void NewFunction()
-{
-	vTaskDelay(CONFIG_BLINK_PERIOD/portTICK_PERIOD_MS);
-}
 void app_main(void)
 {
 LedsInit();
 SwitchesInit();
-xTaskCreate(&valorteclas, "teclas", 512, NULL, 1, NULL);
-xTaskCreate(&medirdistancia, "mide", 512, NULL, 1, NULL);
-xTaskCreate(&mostrarDistancia, "muestra", 512, NULL, 1, NULL);
+LcdItsE0803Init();
+HcSr04Init(GPIO_3,GPIO_2);
+
+xTaskCreate(&medirdistancia, "mide", 2048, NULL, 5, NULL);
+xTaskCreate(&valorteclas, "teclas", 512, NULL, 5, NULL);
+xTaskCreate(&mostrarDistancia,"muestra",512,NULL,5,NULL);
 }
 /*==================[end of file]============================================*/
