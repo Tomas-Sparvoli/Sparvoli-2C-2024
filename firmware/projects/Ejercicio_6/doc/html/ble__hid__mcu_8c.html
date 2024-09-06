@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Proyecto 1 EP: Referencia del archivo C:/Users/User/Desktop/Repositorio/Sparvoli-2C-2024/firmware/drivers/microcontroller/src/ble_hid_mcu.c</title>
+<title>Ejercicio 6: Referencia del archivo C:/Users/Tomas/Desktop/Repositorio/Sparvoli-2C-2024/firmware/drivers/microcontroller/src/ble_hid_mcu.c</title>
 <link rel="icon" href="icon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -34,7 +34,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Proyecto 1 EP<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">Ejercicio 6<span id="projectnumber">&#160;1.0</span>
    </div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -54,7 +54,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generado por Doxygen 1.12.0 -->
+<!-- Generado por Doxygen 1.11.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
@@ -281,9 +281,9 @@ defines</h2></td></tr>
 <tr class="memitem:a7907956e9e9ae0f0d5e6a928c9e1f143" id="r_a7907956e9e9ae0f0d5e6a928c9e1f143"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7907956e9e9ae0f0d5e6a928c9e1f143">HIDD_LE_CLEANUP_FNCT</a>&#160;&#160;&#160;(<a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
 <tr class="memdesc:a7907956e9e9ae0f0d5e6a928c9e1f143"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the connection clean-up function.  <br /></td></tr>
 <tr class="separator:a7907956e9e9ae0f0d5e6a928c9e1f143"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a869398c9f0eb7bcf1c8e101b052eed07" id="r_a869398c9f0eb7bcf1c8e101b052eed07"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a869398c9f0eb7bcf1c8e101b052eed07">HI_UINT16</a>(a)</td></tr>
+<tr class="memitem:a869398c9f0eb7bcf1c8e101b052eed07" id="r_a869398c9f0eb7bcf1c8e101b052eed07"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a869398c9f0eb7bcf1c8e101b052eed07">HI_UINT16</a>(a)&#160;&#160;&#160;(((a) &gt;&gt; 8) &amp; 0xFF)</td></tr>
 <tr class="separator:a869398c9f0eb7bcf1c8e101b052eed07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2b94e11f455d94fd743666d4f1364d7" id="r_ab2b94e11f455d94fd743666d4f1364d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2b94e11f455d94fd743666d4f1364d7">LO_UINT16</a>(a)</td></tr>
+<tr class="memitem:ab2b94e11f455d94fd743666d4f1364d7" id="r_ab2b94e11f455d94fd743666d4f1364d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2b94e11f455d94fd743666d4f1364d7">LO_UINT16</a>(a)&#160;&#160;&#160;((a) &amp; 0xFF)</td></tr>
 <tr class="separator:ab2b94e11f455d94fd743666d4f1364d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab6353cb3662bdc672ae8ab90df529ce" id="r_aab6353cb3662bdc672ae8ab90df529ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab6353cb3662bdc672ae8ab90df529ce">PROFILE_NUM</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:aab6353cb3662bdc672ae8ab90df529ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -598,12 +598,11 @@ Variables</h2></td></tr>
           <td class="memname">#define HI_UINT16</td>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
-          <td></td>
+          <td>&#160;&#160;&#160;(((a) &gt;&gt; 8) &amp; 0xFF)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Valor:</b><div class="fragment"><div class="line">(((a) &gt;&gt; 8) &amp; 0xFF)</div>
-</div><!-- fragment -->
+
 <p class="definition">Definición en la línea <a class="el" href="ble__hid__mcu_8c_source.html#l00221">221</a> del archivo <a class="el" href="ble__hid__mcu_8c_source.html">ble_hid_mcu.c</a>.</p>
 
 </div>
@@ -1326,12 +1325,11 @@ Variables</h2></td></tr>
           <td class="memname">#define LO_UINT16</td>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
-          <td></td>
+          <td>&#160;&#160;&#160;((a) &amp; 0xFF)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Valor:</b><div class="fragment"><div class="line">((a) &amp; 0xFF)</div>
-</div><!-- fragment -->
+
 <p class="definition">Definición en la línea <a class="el" href="ble__hid__mcu_8c_source.html#l00222">222</a> del archivo <a class="el" href="ble__hid__mcu_8c_source.html">ble_hid_mcu.c</a>.</p>
 
 </div>
@@ -2246,7 +2244,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_4774754e228843183aac8de48667fdde.html">drivers</a></li><li class="navelem"><a class="el" href="dir_d160f35dc52f3817b5a745af8a8d0f15.html">microcontroller</a></li><li class="navelem"><a class="el" href="dir_38cdc4999cf52a062657331cc3e157fe.html">src</a></li><li class="navelem"><a class="el" href="ble__hid__mcu_8c.html">ble_hid_mcu.c</a></li>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

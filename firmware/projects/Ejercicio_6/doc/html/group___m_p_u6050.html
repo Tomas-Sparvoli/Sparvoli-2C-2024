@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Proyecto 1 EP: MPU6050</title>
+<title>Ejercicio 6: MPU6050</title>
 <link rel="icon" href="icon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -34,7 +34,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Proyecto 1 EP<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">Ejercicio 6<span id="projectnumber">&#160;1.0</span>
    </div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -54,7 +54,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generado por Doxygen 1.12.0 -->
+<!-- Generado por Doxygen 1.11.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
@@ -113,7 +113,7 @@ $(function(){initNavTree('group___m_p_u6050.html',''); initResizable(true); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 defines</h2></td></tr>
-<tr class="memitem:ga48c60b057902adf805797f183286728d" id="r_ga48c60b057902adf805797f183286728d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga48c60b057902adf805797f183286728d">pgm_read_byte</a>(addr)</td></tr>
+<tr class="memitem:ga48c60b057902adf805797f183286728d" id="r_ga48c60b057902adf805797f183286728d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga48c60b057902adf805797f183286728d">pgm_read_byte</a>(addr)&#160;&#160;&#160;(*(const unsigned char *)(addr))</td></tr>
 <tr class="memdesc:ga48c60b057902adf805797f183286728d"><td class="mdescLeft">&#160;</td><td class="mdescRight">MPU6050 sensor module is a 6-axis Motion Tracking Device. It combines 3-axis Accelerometer and 3-axis Gyroscope. It communicates with the EDU-ESP board via I2C.  <br /></td></tr>
 <tr class="separator:ga48c60b057902adf805797f183286728d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad9c8593ecb6f9a2865b8080add402cc6" id="r_gad9c8593ecb6f9a2865b8080add402cc6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad9c8593ecb6f9a2865b8080add402cc6">MPU6050_ADDRESS_AD0_LOW</a>&#160;&#160;&#160;0x68</td></tr>
@@ -6912,12 +6912,11 @@ Funciones</h2></td></tr>
           <td class="memname">#define pgm_read_byte</td>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>addr</em></span></td><td>)</td>
-          <td></td>
+          <td>&#160;&#160;&#160;(*(const unsigned char *)(addr))</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Valor:</b><div class="fragment"><div class="line">(*(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *)(addr))</div>
-</div><!-- fragment -->
+
 <p>MPU6050 sensor module is a 6-axis Motion Tracking Device. It combines 3-axis Accelerometer and 3-axis Gyroscope. It communicates with the EDU-ESP board via I2C. </p>
 <dl class="section author"><dt>Autor</dt><dd>Juan Ignacio Cerrudo</dd></dl>
 <h1><a class="anchor" id="changelog"></a>
@@ -9334,7 +9333,7 @@ FS_SEL | Full Scale Range   | LSB Sensitivity
       </table>
 </div><div class="memdoc">
 <p>Get Slave 4 master delay value. This configures the reduced access rate of I2C slaves relative to the Sample Rate. When a slave's access rate is decreased relative to the Sample Rate, the slave is accessed every: </p><pre class="fragment">1 / (1 + I2C_MST_DLY) samples
-</pre><p>This base Sample Rate in turn is determined by SMPLRT_DIV (register 25) and DLPF_CFG (register 26). Whether a slave's access rate is reduced relative to the Sample Rate is determined by I2C_MST_DELAY_CTRL (register 103). For further information regarding the Sample Rate, please refer to register 25.</p>
+</pre><p> This base Sample Rate in turn is determined by SMPLRT_DIV (register 25) and DLPF_CFG (register 26). Whether a slave's access rate is reduced relative to the Sample Rate is determined by I2C_MST_DELAY_CTRL (register 103). For further information regarding the Sample Rate, please refer to register 25.</p>
 <dl class="section return"><dt>Devuelve</dt><dd>Current Slave 4 master delay value </dd></dl>
 <dl class="section see"><dt>Ver también</dt><dd><a class="el" href="#ga2b6fbfceb145ba1c8b19f51475fd7a5d">MPU6050_RA_I2C_SLV4_CTRL</a> </dd></dl>
 
@@ -9495,7 +9494,7 @@ FS_SEL | Full Scale Range   | LSB Sensitivity
       </table>
 </div><div class="memdoc">
 <p>Get slave delay enabled status. When a particular slave delay is enabled, the rate of access for the that slave device is reduced. When a slave's access rate is decreased relative to the Sample Rate, the slave is accessed every: </p><pre class="fragment">1 / (1 + I2C_MST_DLY) Samples
-</pre><p>This base Sample Rate in turn is determined by SMPLRT_DIV (register * 25) and DLPF_CFG (register 26).</p>
+</pre><p> This base Sample Rate in turn is determined by SMPLRT_DIV (register * 25) and DLPF_CFG (register 26).</p>
 <p>For further information regarding I2C_MST_DLY, please refer to register 52. For further information regarding the Sample Rate, please refer to register 25.</p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
@@ -10367,7 +10366,7 @@ LP_WAKE_CTRL | Wake-up Frequency
 
 <p class="definition">Definición en la línea <a class="el" href="mpu6050_8c_source.html#l00025">25</a> del archivo <a class="el" href="mpu6050_8c_source.html">mpu6050.c</a>.</p>
 
-<p class="reference">Hace referencia a <a class="el" href="bootloader-cfgcmd_8txt_source.html#l00001">cmd</a>, <a class="el" href="i2c__mcu_8c_source.html#l00024">ESP_ERROR_CHECK</a>, <a class="el" href="mpu6050_8c_source.html#l00017">I2C_NUM</a> y <a class="el" href="i2c__mcu_8c_source.html#l00153">I2C_SelectRegister()</a>.</p>
+<p class="reference">Hace referencia a <a class="el" href="i2c__mcu_8c_source.html#l00024">ESP_ERROR_CHECK</a>, <a class="el" href="mpu6050_8c_source.html#l00017">I2C_NUM</a> y <a class="el" href="i2c__mcu_8c_source.html#l00153">I2C_SelectRegister()</a>.</p>
 
 </div>
 </div>
@@ -13083,7 +13082,7 @@ MPU6050_RA_MST_CTRL </dd></dl>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

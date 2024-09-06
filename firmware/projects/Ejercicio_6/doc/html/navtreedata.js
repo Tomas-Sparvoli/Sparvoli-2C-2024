@@ -24,9 +24,9 @@
 */
 var NAVTREE =
 [
-  [ "Proyecto 1 EP", "index.html", [
+  [ "Ejercicio 6", "index.html", [
     [ "Ejercicio_6", "index.html", "index" ],
-    [ "Template", "md__c_1_2_users_2_user_2_desktop_2_repositorio_2_sparvoli-2_c-2024_2firmware_2projects_2_ejercicio__6_2_r_e_a_d_m_e.html", null ],
+    [ "Template", "md__c_1_2_users_2_tomas_2_desktop_2_repositorio_2_sparvoli-2_c-2024_2firmware_2projects_2_ejercicio__6_2_r_e_a_d_m_e.html", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Estructuras de datos", "annotated.html", [
       [ "Estructuras de datos", "annotated.html", "annotated_dup" ],
@@ -41,7 +41,7 @@ var NAVTREE =
       [ "Globales", "globals.html", [
         [ "Todos", "globals.html", "globals_dup" ],
         [ "Funciones", "globals_func.html", "globals_func" ],
-        [ "Variables", "globals_vars.html", "globals_vars" ],
+        [ "Variables", "globals_vars.html", null ],
         [ "typedefs", "globals_type.html", null ],
         [ "Enumeraciones", "globals_enum.html", null ],
         [ "Valores de enumeraciones", "globals_eval.html", "globals_eval" ],
@@ -53,21 +53,14 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_c_make_files_23_824_80_2_compiler_id_c_2_c_make_c_compiler_id_8c.html",
-"bootloader_2config_2sdkconfig_8h.html#a143ce921fa2a566bb8199bfb525b1497",
-"bootloader_2config_2sdkconfig_8h.html#a7a16b0e2245e5be2bd6209309478c561",
-"bootloader_2config_2sdkconfig_8h.html#ae55d8293c56fee1d6262d2877c65d88f",
-"config_2sdkconfig_8h.html#a314b89cf65a357156c69026b45e0eede",
-"config_2sdkconfig_8h.html#a760f7c25f9a2b365317478ff20648260",
-"config_2sdkconfig_8h.html#ab99651cbca9bf6ed8939942f13dbf8f9",
-"config_2sdkconfig_8h.html#af96fcefd016ebef53989b06b79ccfe0d",
-"group___b_l_e.html#gae207a1d79a9762a3a3701e091bbb22c9",
-"group___delay.html#ga92e1b2564bacd20071bcd06b697f52f8",
-"group___m_p_u6050.html#ga03f95a0f712cf6d405647f8b3e904969",
-"group___m_p_u6050.html#ga750b9796bad18b46826726f2820c79f7",
-"group___m_p_u6050.html#gae9fcc5c19cb562c4878eda32faa28c8a",
-"ili9341_8c.html#a7f2398c30b4b925af593fae3bb4168d0",
-"structhidd__le__env__t.html#a8d358a50fa9a4657e7833e6fafd061cb"
+"_ejercicio__6_8c.html",
+"globals_func_g.html",
+"group___b_u_z_z_e_r.html#ga638f884f0226cff11eff97ba96fbce88",
+"group___i_l_i9341.html#ga19b26d4d6ae752db7302c9cbb8688d51",
+"group___m_p_u6050.html#ga4d30210e25c9c966889d93560933ca32",
+"group___m_p_u6050.html#gabca1324e14bfff124823daecc1df2479",
+"group___w_s2812_b.html#gab5724b524301eafce386e26782206b3c",
+"structesp__hidd__cb__param__t_1_1hidd__deinit__finish__evt__param.html"
 ];
 
 var SYNCONMSG = 'pulsar para deshabilitar sincronización';
