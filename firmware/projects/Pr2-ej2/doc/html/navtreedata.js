@@ -57,6 +57,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_c_make_files_23_824_80_2_compiler_id_c_2_c_make_c_compiler_id_8c.html",
+<<<<<<< HEAD
 "bootloader_2config_2sdkconfig_8h.html#a107695a6fc0632e908ae1d07e6f3d763",
 "bootloader_2config_2sdkconfig_8h.html#a74bc9a86ab5f1cec2271f7ef4ef7e05b",
 "bootloader_2config_2sdkconfig_8h.html#ae008a24dc00a87cc67e097db35b0fa60",
@@ -71,6 +72,22 @@ var NAVTREEINDEX =
 "group___m_p_u6050.html#gae33062d5e05f28a5aa6831b7f1d88104",
 "ili9341_8c.html#a5ae6b05b3e1559c97f0d1b2daaaa0ee4",
 "structhidd__inst__t.html#abdf9761d9e8c90fd70ec6eacaad8be2c"
+=======
+"bootloader_2config_2sdkconfig_8h.html#a1146576386cb40d5197541e70ede5524",
+"bootloader_2config_2sdkconfig_8h.html#a760f7c25f9a2b365317478ff20648260",
+"bootloader_2config_2sdkconfig_8h.html#ae0a982f1e6b344e20465acba30149519",
+"config_2sdkconfig_8h.html#a2eddda2d77c845d2c6306968f185b820",
+"config_2sdkconfig_8h.html#a73350cf9f9ced96ce721741d957feadb",
+"config_2sdkconfig_8h.html#ab6388b2693c34349500d26b7fd13f7e0",
+"config_2sdkconfig_8h.html#af6da93c6d3658e798346a5de26db350a",
+"group___b_l_e.html#ga94512d231afe9cff7e7aa8eff3a18fba",
+"group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gae80e60c46cc189a59d24c7e48f4c833f",
+"group___m_p_u6050.html",
+"group___m_p_u6050.html#ga70ce4d71982a1e3fb2be9b71f40da786",
+"group___m_p_u6050.html#gae5cf60bf2cbc13d21384c215c4f05149",
+"ili9341_8c.html#a5d38d9987627bf2e19312456b3ca399b",
+"structhidd__le__env__t.html"
+>>>>>>> 5f06e878a9e572493e7862c98a68fe2e3d8a7ba0
 ];
 
 var SYNCONMSG = 'pulsar para deshabilitar sincronización';

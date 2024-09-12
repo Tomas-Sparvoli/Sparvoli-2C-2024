@@ -1,7 +1,10 @@
 var NAVTREEINDEX5 =
 {
+<<<<<<< HEAD
 "config_2sdkconfig_8h.html#a72642ab91b15bee4f1f92beca3bc40e4":[7,0,0,1,0,0,3,0,732],
 "config_2sdkconfig_8h.html#a72afb54fc71274e23282847ec28eb359":[7,0,0,1,0,0,3,0,305],
+=======
+>>>>>>> 5f06e878a9e572493e7862c98a68fe2e3d8a7ba0
 "config_2sdkconfig_8h.html#a73350cf9f9ced96ce721741d957feadb":[7,0,0,1,0,0,3,0,858],
 "config_2sdkconfig_8h.html#a7339298a2b73bc3586fbf9ea99971320":[7,0,0,1,0,0,3,0,28],
 "config_2sdkconfig_8h.html#a7346b8aa549921ef85fb3e1a0ad596d7":[7,0,0,1,0,0,3,0,273],
@@ -249,5 +252,11 @@ var NAVTREEINDEX5 =
 "config_2sdkconfig_8h.html#ab3cbd084ca06bf098ff72dc14465dbb2":[7,0,0,1,0,0,3,0,912],
 "config_2sdkconfig_8h.html#ab4b68c27ed3005b187aff51ec73f8847":[7,0,0,1,0,0,3,0,133],
 "config_2sdkconfig_8h.html#ab4ce0f2c2c63f611cc8f670c5d60a72a":[7,0,0,1,0,0,3,0,443],
+<<<<<<< HEAD
 "config_2sdkconfig_8h.html#ab58751bf45af4f368f3e8c1a81b819b5":[7,0,0,1,0,0,3,0,258]
+=======
+"config_2sdkconfig_8h.html#ab58751bf45af4f368f3e8c1a81b819b5":[7,0,0,1,0,0,3,0,258],
+"config_2sdkconfig_8h.html#ab58f84414a4d021d2e906a6c9625b867":[7,0,0,1,0,0,3,0,319],
+"config_2sdkconfig_8h.html#ab601227b25654a73cf7ed29950b51319":[7,0,0,1,0,0,3,0,255]
+>>>>>>> 5f06e878a9e572493e7862c98a68fe2e3d8a7ba0
 };

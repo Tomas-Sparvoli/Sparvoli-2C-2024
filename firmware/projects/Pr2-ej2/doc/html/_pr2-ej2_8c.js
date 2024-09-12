@@ -8,8 +8,11 @@ var _pr2_ej2_8c =
     [ "FuncTimerA", "_pr2-ej2_8c.html#afaccfed84cd1498a05ea04a65f1209b1", null ],
     [ "FuncTimerB", "_pr2-ej2_8c.html#a5088c3325764095ca222dc78c328f466", null ],
     [ "Leds", "_pr2-ej2_8c.html#afbeb30f5a4e35e55d9e35358b572b5d0", null ],
+<<<<<<< HEAD
     [ "medirdistancia", "_pr2-ej2_8c.html#af3d5c13a014e4e1e9e58b843ece43e59", null ],
     [ "mostrarDistancia", "_pr2-ej2_8c.html#acac7b6f1f6c6921d702063b349ad541d", null ],
+=======
+>>>>>>> 5f06e878a9e572493e7862c98a68fe2e3d8a7ba0
     [ "distancia", "_pr2-ej2_8c.html#aec40b15ff3098bdb2425eb4dc9c11a18", null ],
     [ "encendido", "_pr2-ej2_8c.html#a5332d02d82dacdfb5c6dc01cb428b013", null ],
     [ "hold", "_pr2-ej2_8c.html#af0129e079b57e897edf00f22cc25f3d4", null ],

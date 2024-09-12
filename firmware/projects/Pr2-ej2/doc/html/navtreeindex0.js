@@ -36,6 +36,7 @@ var NAVTREEINDEX0 =
 "_c_make_files_23_824_80_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp_source.html":[7,0,0,1,0,0,2,0,1,0],
 "_pr2-ej2_8c.html":[7,0,0,1,0,1,0],
 "_pr2-ej2_8c.html#a285de706a1d1fbd5d4f827260ae8f2de":[7,0,0,1,0,1,0,4],
+<<<<<<< HEAD
 "_pr2-ej2_8c.html#a317827d66169ff37a4679535d5c15028":[7,0,0,1,0,1,0,14],
 "_pr2-ej2_8c.html#a3df1b4cad09974bfc68858fad7cdc054":[7,0,0,1,0,1,0,0],
 "_pr2-ej2_8c.html#a5088c3325764095ca222dc78c328f466":[7,0,0,1,0,1,0,6],
@@ -48,6 +49,18 @@ var NAVTREEINDEX0 =
 "_pr2-ej2_8c.html#aec40b15ff3098bdb2425eb4dc9c11a18":[7,0,0,1,0,1,0,10],
 "_pr2-ej2_8c.html#af0129e079b57e897edf00f22cc25f3d4":[7,0,0,1,0,1,0,12],
 "_pr2-ej2_8c.html#af3d5c13a014e4e1e9e58b843ece43e59":[7,0,0,1,0,1,0,8],
+=======
+"_pr2-ej2_8c.html#a317827d66169ff37a4679535d5c15028":[7,0,0,1,0,1,0,12],
+"_pr2-ej2_8c.html#a3df1b4cad09974bfc68858fad7cdc054":[7,0,0,1,0,1,0,0],
+"_pr2-ej2_8c.html#a5088c3325764095ca222dc78c328f466":[7,0,0,1,0,1,0,6],
+"_pr2-ej2_8c.html#a5332d02d82dacdfb5c6dc01cb428b013":[7,0,0,1,0,1,0,9],
+"_pr2-ej2_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70":[7,0,0,1,0,1,0,2],
+"_pr2-ej2_8c.html#a8c0e695db9ea0899c79b9c5493827b70":[7,0,0,1,0,1,0,1],
+"_pr2-ej2_8c.html#a99fb1c4e62e79c95fd7542235954f294":[7,0,0,1,0,1,0,3],
+"_pr2-ej2_8c.html#ae39b1f9d63940785c267968dce470a67":[7,0,0,1,0,1,0,11],
+"_pr2-ej2_8c.html#aec40b15ff3098bdb2425eb4dc9c11a18":[7,0,0,1,0,1,0,8],
+"_pr2-ej2_8c.html#af0129e079b57e897edf00f22cc25f3d4":[7,0,0,1,0,1,0,10],
+>>>>>>> 5f06e878a9e572493e7862c98a68fe2e3d8a7ba0
 "_pr2-ej2_8c.html#afaccfed84cd1498a05ea04a65f1209b1":[7,0,0,1,0,1,0,5],
 "_pr2-ej2_8c.html#afbeb30f5a4e35e55d9e35358b572b5d0":[7,0,0,1,0,1,0,7],
 "_pr2-ej2_8c_source.html":[7,0,0,1,0,1,0],
@@ -249,5 +262,11 @@ var NAVTREEINDEX0 =
 "bootloader_2config_2sdkconfig_8h.html#a0f1c38c731361a0e2cfc7c7321120193":[7,0,0,1,0,0,0,1,0,233],
 "bootloader_2config_2sdkconfig_8h.html#a0f2ff2ea569e88934eebeaca5e84f0cb":[7,0,0,1,0,0,0,1,0,104],
 "bootloader_2config_2sdkconfig_8h.html#a0f4b9ccfbf98a49be5edbcaf5ef335ee":[7,0,0,1,0,0,0,1,0,176],
+<<<<<<< HEAD
 "bootloader_2config_2sdkconfig_8h.html#a104a75c383f8d0bf29f73ff2880d8c6e":[7,0,0,1,0,0,0,1,0,187]
+=======
+"bootloader_2config_2sdkconfig_8h.html#a104a75c383f8d0bf29f73ff2880d8c6e":[7,0,0,1,0,0,0,1,0,187],
+"bootloader_2config_2sdkconfig_8h.html#a107695a6fc0632e908ae1d07e6f3d763":[7,0,0,1,0,0,0,1,0,39],
+"bootloader_2config_2sdkconfig_8h.html#a10d58f2c40f0feab09529562092a47b7":[7,0,0,1,0,0,0,1,0,164]
+>>>>>>> 5f06e878a9e572493e7862c98a68fe2e3d8a7ba0
 };

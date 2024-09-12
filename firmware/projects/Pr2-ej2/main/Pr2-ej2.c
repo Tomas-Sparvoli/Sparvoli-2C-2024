@@ -107,8 +107,12 @@ void FuncTimerB(void* param){
  * @param pvParameter Parámetro opcional (no se utiliza en esta función).
  */
 
+<<<<<<< HEAD
 
 void medirdistancia(void *pvParameter)
+=======
+static void medirdistancia(void *pvParameter)
+>>>>>>> 5f06e878a9e572493e7862c98a68fe2e3d8a7ba0
 {
 	while (true)
 	{
@@ -205,8 +209,12 @@ void Leds()
  * @param pvParameter Parámetro opcional (no se utiliza en esta función).
  */
 
+<<<<<<< HEAD
 
 void mostrarDistancia(void *pvParameter)
+=======
+static void mostrarDistancia(void *pvParameter)
+>>>>>>> 5f06e878a9e572493e7862c98a68fe2e3d8a7ba0
 {
 	while (true)
 	{	

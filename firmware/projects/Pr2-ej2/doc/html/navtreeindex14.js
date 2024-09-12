@@ -1,7 +1,10 @@
 var NAVTREEINDEX14 =
 {
+<<<<<<< HEAD
 "structhidd__inst__t.html#abdf9761d9e8c90fd70ec6eacaad8be2c":[6,0,12,0],
 "structhidd__inst__t.html#ad1c33cd0a6de17edb91e3f9ac6408bad":[6,0,12,2],
+=======
+>>>>>>> 5f06e878a9e572493e7862c98a68fe2e3d8a7ba0
 "structhidd__le__env__t.html":[6,0,13],
 "structhidd__le__env__t.html#a0b5d1f94c1764acd221ea07d9194d36b":[6,0,13,7],
 "structhidd__le__env__t.html#a1cafcfc2034b035274780fd259018449":[6,0,13,2],

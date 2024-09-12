@@ -1,7 +1,10 @@
 var NAVTREEINDEX13 =
 {
+<<<<<<< HEAD
 "ili9341_8c.html#a5ae6b05b3e1559c97f0d1b2daaaa0ee4":[7,0,0,0,0,1,6,8],
 "ili9341_8c.html#a5caebf870bad746770549a3e5fa09495":[7,0,0,0,0,1,6,18],
+=======
+>>>>>>> 5f06e878a9e572493e7862c98a68fe2e3d8a7ba0
 "ili9341_8c.html#a5d38d9987627bf2e19312456b3ca399b":[7,0,0,0,0,1,6,11],
 "ili9341_8c.html#a61f0dfed825350751d2c07c7c50a35ff":[7,0,0,0,0,1,6,5],
 "ili9341_8c.html#a64425812670d1aa05fd620e20bfc3df7":[7,0,0,0,0,1,6,43],
@@ -249,5 +252,11 @@ var NAVTREEINDEX13 =
 "structhidd__inst__t.html#a495699a2ab108b1a8a3b946a36b50979":[6,0,12,3],
 "structhidd__inst__t.html#a4b02da3773a64fb803b4e3e238fb536b":[6,0,12,1],
 "structhidd__inst__t.html#a952a3c195acc8c36d644a05851803e26":[6,0,12,7],
+<<<<<<< HEAD
 "structhidd__inst__t.html#ab3d1d6abcb1adc8485e2b95731213cda":[6,0,12,5]
+=======
+"structhidd__inst__t.html#ab3d1d6abcb1adc8485e2b95731213cda":[6,0,12,5],
+"structhidd__inst__t.html#abdf9761d9e8c90fd70ec6eacaad8be2c":[6,0,12,0],
+"structhidd__inst__t.html#ad1c33cd0a6de17edb91e3f9ac6408bad":[6,0,12,2]
+>>>>>>> 5f06e878a9e572493e7862c98a68fe2e3d8a7ba0
 };
