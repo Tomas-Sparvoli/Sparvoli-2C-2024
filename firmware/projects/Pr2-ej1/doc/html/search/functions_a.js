@@ -1,8 +1,8 @@
 var searchData=
 [
   ['main_0',['main',['../bootloader_2_c_make_files_23_824_80_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCCompilerId.c'],['../bootloader_2_c_make_files_23_824_80_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCXXCompilerId.cpp'],['../_c_make_files_23_824_80_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCCompilerId.c'],['../_c_make_files_23_824_80_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCXXCompilerId.cpp']]],
-  ['medirdistancia_1',['medirdistancia',['../_pr2-ej1_8c.html#aceea7745b10eb78cf2b8354d95e57c4e',1,'Pr2-ej1.c']]],
-  ['mostrardistancia_2',['mostrarDistancia',['../_pr2-ej1_8c.html#a94c3137bb6f28ea2664c92c7ad10716d',1,'Pr2-ej1.c']]],
+  ['medirdistancia_1',['medirdistancia',['../_pr2-ej1_8c.html#af3d5c13a014e4e1e9e58b843ece43e59',1,'Pr2-ej1.c']]],
+  ['mostrardistancia_2',['mostrarDistancia',['../_pr2-ej1_8c.html#acac7b6f1f6c6921d702063b349ad541d',1,'Pr2-ej1.c']]],
   ['mpu6050_5faddress_3',['MPU6050_Address',['../group___m_p_u6050.html#ga07a69491e10ff82d432b46171fdfe132',1,'MPU6050_Address(uint8_t address):&#160;mpu6050.c'],['../group___m_p_u6050.html#ga07a69491e10ff82d432b46171fdfe132',1,'MPU6050_Address(uint8_t address):&#160;mpu6050.c']]],
   ['mpu6050_5fgetacceleration_4',['MPU6050_getAcceleration',['../group___m_p_u6050.html#ga2c0be7c37c1647973d0b5d5ed559c084',1,'MPU6050_getAcceleration(int16_t *x, int16_t *y, int16_t *z):&#160;mpu6050.c'],['../group___m_p_u6050.html#ga2c0be7c37c1647973d0b5d5ed559c084',1,'MPU6050_getAcceleration(int16_t *x, int16_t *y, int16_t *z):&#160;mpu6050.c']]],
   ['mpu6050_5fgetaccelerationx_5',['MPU6050_getAccelerationX',['../group___m_p_u6050.html#gac996d44c26dca7a5d6cbcb6478af1510',1,'MPU6050_getAccelerationX():&#160;mpu6050.c'],['../group___m_p_u6050.html#gac996d44c26dca7a5d6cbcb6478af1510',1,'MPU6050_getAccelerationX():&#160;mpu6050.c']]],

@@ -24,8 +24,14 @@
 */
 var NAVTREE =
 [
-  [ "Proyecto 2 ej 1", "index.html", [
-    [ "Pr2-ej1", "index.html", "index" ],
+  [ "Pr2-ej1", "index.html", [
+    [ "General Description", "index.html#genDesc", null ],
+    [ "Hardware Connection", "index.html#hardConn", null ],
+    [ "Changelog", "index.html#changelog", null ],
+    [ "Author", "index.html#author", null ],
+    [ "License", "index.html#license", null ],
+    [ "Usage", "index.html#usage", null ],
+    [ "Dependencies", "index.html#dependencies", null ],
     [ "Template", "md__c_1_2_users_2_user_2_desktop_2_repositorio_2_sparvoli-2_c-2024_2firmware_2projects_2_pr2-ej1_2_r_e_a_d_m_e.html", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Estructuras de datos", "annotated.html", [
@@ -54,20 +60,20 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_c_make_files_23_824_80_2_compiler_id_c_2_c_make_c_compiler_id_8c.html",
-"bootloader_2config_2sdkconfig_8h.html#a107695a6fc0632e908ae1d07e6f3d763",
-"bootloader_2config_2sdkconfig_8h.html#a74bc9a86ab5f1cec2271f7ef4ef7e05b",
-"bootloader_2config_2sdkconfig_8h.html#ae008a24dc00a87cc67e097db35b0fa60",
-"config_2sdkconfig_8h.html#a2e745088c25b09e0ba55faa43be992ce",
-"config_2sdkconfig_8h.html#a72642ab91b15bee4f1f92beca3bc40e4",
-"config_2sdkconfig_8h.html#ab58f84414a4d021d2e906a6c9625b867",
-"config_2sdkconfig_8h.html#af69d58ecc5ed54e7338a76ac99ee4a6a",
-"group___b_l_e.html#ga67558f92332c3d7edc94278eb7a45cfc",
-"group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gad75548f6b235cc90a1f480e2e5498635",
-"group___l_e_d.html#ggab6831a7d06c0a2bc69f9b024f6445a80a00af6b2437d9982f1f125d2cc2537c41",
-"group___m_p_u6050.html#ga6f60cd0eb327acc7336b7ed891ca6343",
-"group___m_p_u6050.html#gae31d6d83d0822e5c28cc1d95998db749",
-"ili9341_8c.html#a5a96556b55f3bf5350e836859a37280d",
-"structhidd__inst__t.html#ab3d1d6abcb1adc8485e2b95731213cda"
+"bootloader_2config_2sdkconfig_8h.html#a1146576386cb40d5197541e70ede5524",
+"bootloader_2config_2sdkconfig_8h.html#a760f7c25f9a2b365317478ff20648260",
+"bootloader_2config_2sdkconfig_8h.html#ae0a982f1e6b344e20465acba30149519",
+"config_2sdkconfig_8h.html#a2eddda2d77c845d2c6306968f185b820",
+"config_2sdkconfig_8h.html#a73350cf9f9ced96ce721741d957feadb",
+"config_2sdkconfig_8h.html#ab6388b2693c34349500d26b7fd13f7e0",
+"config_2sdkconfig_8h.html#af6da93c6d3658e798346a5de26db350a",
+"group___b_l_e.html#ga8001369ce247b2413afd6d8a14fe8d82",
+"group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gae4456a4726f28e66e43bafebb82bfdb4",
+"group___l_e_d.html#ggab6831a7d06c0a2bc69f9b024f6445a80a3e1b1af0f74f675e4eb7bd18229adfd3",
+"group___m_p_u6050.html#ga6f868243da42fba3551636400745347c",
+"group___m_p_u6050.html#gae4804708dd5f21dbca1ff1815b883504",
+"ili9341_8c.html#a5caebf870bad746770549a3e5fa09495",
+"structhidd__inst__t.html#a952a3c195acc8c36d644a05851803e26"
 ];
 
 var SYNCONMSG = 'pulsar para deshabilitar sincronización';

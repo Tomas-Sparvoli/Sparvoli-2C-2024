@@ -44,7 +44,8 @@ var searchData=
   ['left_5fgui_5fkey_5fmask_41',['LEFT_GUI_KEY_MASK',['../group___b_l_e.html#gga5f72a05c6c7165f5270a63ffba14035bab7fb954fa02a79c03210c70e8e298e7a',1,'ble_hid_mcu.h']]],
   ['left_5fshift_5fkey_5fmask_42',['LEFT_SHIFT_KEY_MASK',['../group___b_l_e.html#gga5f72a05c6c7165f5270a63ffba14035ba3d608f93849fc015d9794cb8d704aa76',1,'ble_hid_mcu.h']]],
   ['length_43',['length',['../structesp__hidd__cb__param__t_1_1hidd__vendor__write__evt__param.html#a1892eba2086d12ac2b09005aeb09ea3b',1,'esp_hidd_cb_param_t::hidd_vendor_write_evt_param::length'],['../structesp__hidd__cb__param__t_1_1hidd__led__write__evt__param.html#ab2b3adeb2a67e656ff030b56727fd0ac',1,'esp_hidd_cb_param_t::hidd_led_write_evt_param::length'],['../struct_c_m_d__t.html#ae809d5359ac030c60a30a8f0b2294b82',1,'CMD_t::length']]],
-  ['lo_5fuint16_44',['LO_UINT16',['../ble__hid__mcu_8c.html#ab2b94e11f455d94fd743666d4f1364d7',1,'ble_hid_mcu.c']]],
-  ['low_20energy_45',['Bluetooth Low Energy',['../group___b_l_e.html',1,'']]],
-  ['lowbyte_46',['LowByte',['../ili9341_8c.html#aa9fad731fc07b249db66376d062050cd',1,'ili9341.c']]]
+  ['license_44',['License',['../index.html#license',1,'']]],
+  ['lo_5fuint16_45',['LO_UINT16',['../ble__hid__mcu_8c.html#ab2b94e11f455d94fd743666d4f1364d7',1,'ble_hid_mcu.c']]],
+  ['low_20energy_46',['Bluetooth Low Energy',['../group___b_l_e.html',1,'']]],
+  ['lowbyte_47',['LowByte',['../ili9341_8c.html#aa9fad731fc07b249db66376d062050cd',1,'ili9341.c']]]
 ];

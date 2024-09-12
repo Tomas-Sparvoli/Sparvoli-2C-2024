@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Proyecto 2 ej 1: Pr2-ej1</title>
+<title>Pr2-ej1: Pr2-ej1</title>
 <link rel="icon" href="icon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -34,7 +34,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Proyecto 2 ej 1<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">Pr2-ej1<span id="projectnumber">&#160;1.0</span>
    </div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -109,25 +109,43 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="genDesc"></a>
 General Description</h1>
-<p>This section describes how the program works.</p>
-<p><a href="https://drive.google.com/...">Operation Example</a></p>
+<p>Este archivo contiene la implementación de un sistema basado en FreeRTOS que mide la distancia utilizando un sensor ultrasónico HC-SR04 y controla el estado de varios LEDs y una pantalla LCD basada en los valores medidos. El sistema responde a las entradas de interruptores para encender/apagar la medición de distancia y alternar el comportamiento de la pantalla LCD y los LEDs.</p>
 <h1><a class="anchor" id="hardConn"></a>
 Hardware Connection</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadCenter">Peripheral   </th><th class="markdownTableHeadLeft">ESP32    </th></tr>
+<th class="markdownTableHeadLeft">Peripheral   </th><th class="markdownTableHeadLeft">ESP32    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">PIN_X   </td><td class="markdownTableBodyLeft">GPIO_X   </td></tr>
+<td class="markdownTableBodyLeft">PIN_X   </td><td class="markdownTableBodyLeft">GPIO_X   </td></tr>
 </table>
 <h1><a class="anchor" id="changelog"></a>
 Changelog</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadCenter">Date   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<th class="markdownTableHeadLeft">Date   </th><th class="markdownTableHeadLeft">Description    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">12/09/2023   </td><td class="markdownTableBodyLeft">Document creation   </td></tr>
+<td class="markdownTableBodyLeft">2024-09-12   </td><td class="markdownTableBodyLeft">Creación del archivo con control de LEDs y medición de distancia   </td></tr>
 </table>
-<dl class="section author"><dt>Autor</dt><dd>Albano Peñalva (<a href="#" onclick="location.href='mai'+'lto:'+'alb'+'an'+'o.p'+'en'+'alv'+'a@'+'une'+'r.'+'edu'+'.a'+'r'; return false;">alban<span class="obfuscator">.nosp@m.</span>o.pe<span class="obfuscator">.nosp@m.</span>nalva<span class="obfuscator">.nosp@m.</span>@une<span class="obfuscator">.nosp@m.</span>r.edu<span class="obfuscator">.nosp@m.</span>.ar</a>) </dd></dl>
+<h1><a class="anchor" id="author"></a>
+Author</h1>
+<p>Tomás Mateo Sparvoli (<a href="#" onclick="location.href='mai'+'lto:'+'tom'+'as'+'.sp'+'ar'+'vol'+'i@'+'ing'+'en'+'ier'+'ia'+'.un'+'er'+'.ed'+'u.'+'ar'; return false;">tomas<span class="obfuscator">.nosp@m.</span>.spa<span class="obfuscator">.nosp@m.</span>rvoli<span class="obfuscator">.nosp@m.</span>@ing<span class="obfuscator">.nosp@m.</span>enier<span class="obfuscator">.nosp@m.</span>ia.u<span class="obfuscator">.nosp@m.</span>ner.e<span class="obfuscator">.nosp@m.</span>du.a<span class="obfuscator">.nosp@m.</span>r</a>)</p>
+<dl class="section version"><dt>Versión</dt><dd>1.0</dd></dl>
+<h1><a class="anchor" id="license"></a>
+License</h1>
+<p>Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.</p>
+<h1><a class="anchor" id="usage"></a>
+Usage</h1>
+<p>El archivo configura y controla tres LEDs, una pantalla LCD y un sensor ultrasónico HC-SR04. El sistema crea tres tareas de FreeRTOS:</p><ul>
+<li><code>medirdistancia</code>: Lee la distancia del sensor ultrasónico.</li>
+<li><code>valorteclas</code>: Lee el estado de los interruptores para cambiar el comportamiento del sistema.</li>
+<li><code>mostrarDistancia</code>: Actualiza el estado de los LEDs y la pantalla LCD en función de la distancia medida y el estado de los interruptores.</li>
+</ul>
+<h1><a class="anchor" id="dependencies"></a>
+Dependencies</h1>
+<ul>
+<li>FreeRTOS</li>
+<li>Drivers de hardware (LED, interruptores, HC-SR04, LCD) </li>
+</ul>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->

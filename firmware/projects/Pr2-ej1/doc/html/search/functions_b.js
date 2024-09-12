@@ -10,5 +10,5 @@ var searchData=
   ['neopixelsetarray_7',['NeoPixelSetArray',['../group___neo_pixel___stripe.html#ga23ae424d3a323c2e315b3f89ba857a84',1,'NeoPixelSetArray(neopixel_color_t *color_array):&#160;neopixel_stripe.c'],['../group___neo_pixel___stripe.html#ga23ae424d3a323c2e315b3f89ba857a84',1,'NeoPixelSetArray(neopixel_color_t *color_array):&#160;neopixel_stripe.c']]],
   ['neopixelsetpixel_8',['NeoPixelSetPixel',['../group___neo_pixel___stripe.html#ga7f53683e3207e9523fc201bdc79b6025',1,'NeoPixelSetPixel(uint16_t pixel, neopixel_color_t color):&#160;neopixel_stripe.c'],['../group___neo_pixel___stripe.html#ga7f53683e3207e9523fc201bdc79b6025',1,'NeoPixelSetPixel(uint16_t pixel, neopixel_color_t color):&#160;neopixel_stripe.c']]],
   ['neopixelshift_9',['NeoPixelShift',['../group___neo_pixel___stripe.html#gac95515e3889b8cebd2f8bf0e72590d33',1,'NeoPixelShift(bool upwards):&#160;neopixel_stripe.c'],['../group___neo_pixel___stripe.html#gac95515e3889b8cebd2f8bf0e72590d33',1,'NeoPixelShift(bool upwards):&#160;neopixel_stripe.c']]],
-  ['newfunction_10',['NewFunction',['../_pr2-ej1_8c.html#a263203756782f02e008607aa1da38c84',1,'NewFunction():&#160;Pr2-ej1.c'],['../_pr2-ej1_8h.html#a263203756782f02e008607aa1da38c84',1,'NewFunction():&#160;Pr2-ej1.c']]]
+  ['newfunction_10',['NewFunction',['../_pr2-ej1_8h.html#a263203756782f02e008607aa1da38c84',1,'Pr2-ej1.h']]]
 ];
