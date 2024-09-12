@@ -42,5 +42,6 @@ var searchData=
   ['app_5fmain_39',['app_main',['../_pr2-ej1_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70',1,'Pr2-ej1.c']]],
   ['architecture_5fid_40',['ARCHITECTURE_ID',['../bootloader_2_c_make_files_23_824_80_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCCompilerId.c'],['../bootloader_2_c_make_files_23_824_80_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCXXCompilerId.cpp'],['../_c_make_files_23_824_80_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCCompilerId.c'],['../_c_make_files_23_824_80_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCXXCompilerId.cpp']]],
   ['att_5fsvc_5fhid_41',['ATT_SVC_HID',['../ble__hid__mcu_8c.html#a120ccad3a7e1b92bda154619fbb25ea8',1,'ble_hid_mcu.c']]],
-  ['att_5ftbl_42',['att_tbl',['../structhidd__inst__t.html#a4b02da3773a64fb803b4e3e238fb536b',1,'hidd_inst_t']]]
+  ['att_5ftbl_42',['att_tbl',['../structhidd__inst__t.html#a4b02da3773a64fb803b4e3e238fb536b',1,'hidd_inst_t']]],
+  ['author_43',['Author',['../index.html#author',1,'']]]
 ];
