@@ -71,6 +71,7 @@ TaskHandle_t Cabeza = NULL;
 /*==================[internal functions declaration]=========================*/
 
 /**
+ * @fn FuncTimerA
  * @brief Función que se ejecuta en la interrupción del temporizador A.
  * 
  * @param param Parámetro opcional (no utilizado en esta función).
@@ -80,6 +81,7 @@ void FuncTimerA(void* param){
 }
 
 /**
+ * @fn FuncTimerB
  * @brief Función invocada en la interrupción del timer B
 */
 void FuncTimerB(void* param){
@@ -87,6 +89,7 @@ void FuncTimerB(void* param){
 }
 
 /**
+ * @fn Leds 
  * @brief Controla el estado de los LEDs en función de la distancia medida.
  * 
  * Esta función enciende o apaga los LEDs basándose en el valor de `distancia_referencia `.
@@ -114,6 +117,7 @@ void Leds()
 }
 
 /**
+ * @fn medirdistancia
  * @brief Tarea de FreeRTOS que mide la distancia utilizando el sensor HC-SR04.
  * 
  * Esta función lee continuamente la distancia del sensor y actualiza la variable `distancia`.
@@ -132,11 +136,13 @@ void medirdistancia(void *pvParameter)
 
 
 /**
+ * @fn buzzer
  * @brief Tarea encargada en manejar la salida conectada al buzzer
  * 
  */
 void buzzer ()
-{	GPIOInit(GPIO_12,GPIO_OUTPUT);
+{	
+	GPIOInit(GPIO_12,GPIO_OUTPUT);
 	while (true)
 	{
 		if (distancia_referencia <= 5 && distancia_referencia > 3)	//suena el buzzer a una frecuencia de 1s
@@ -158,6 +164,7 @@ void buzzer ()
 
 
 /**
+ * @fn Notificacion
  * @brief Tarea encargada en notificar via Bt si esta un situacion de precaucion o peligro
  */
 void notificacion ()
@@ -172,11 +179,13 @@ void notificacion ()
 		{
 			UartSendString(UART_CONNECTOR, "Peligro, vehículo cerca");
 		}
+		vTaskDelay(500 / portTICK_PERIOD_MS);
 	}
 }
 
 
 /**
+ * @fn sensorCabeza
  * @brief Tarea encargada en notificar via Bt si la persona se cayo
  */
 void sensorCabeza()
