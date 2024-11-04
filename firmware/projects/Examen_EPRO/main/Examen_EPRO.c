@@ -109,7 +109,25 @@ void medirdistancia(void *pvParameter)
 		ulTaskNotifyTake(pdTRUE, portMAX_DELAY); 
 		distancia=HcSr04ReadDistanceInCentimeters();
 		Leds();
+	}
+}
 
+void buzzer ()
+{
+	GPIOInit(GPIO_12,GPIO_OUTPUT);
+		if (distancia <= 5 && distancia > 3)	//suena el buzzer a una frecuencia de 1s
+	{
+		GPIOOn(GPIO_12);
+		vTaskDelay(1000 / portTICK_PERIOD_MS);	
+		GPIOOff(GPIO_12);
+		vTaskDelay(1000 / portTICK_PERIOD_MS);	
+		}
+	if (distancia <= 3)							//suena el buzzer a una frecuencia de 0,5s
+	{
+		GPIOOn(GPIO_12);
+		vTaskDelay(500 / portTICK_PERIOD_MS);	
+		GPIOOff(GPIO_12);
+		vTaskDelay(500 / portTICK_PERIOD_MS);	
 	}
 }
 
@@ -118,14 +136,17 @@ void app_main(void){
 
 	timer_config_t timer_sensor = {
 		.timer = TIMER_A,
-		.period = 1000000,		//muestro la distancia cada 1 segundo
+		.period = 500000,		//muestro la distancia cada 1/2 segundo
 		.func_p = FuncTimerA,
 		.param_p = NULL
 	};
 	TimerInit(&timer_sensor);
 
+	
+
 HcSr04Init(GPIO_3, GPIO_2);
 xTaskCreate(&medirdistancia, "mide",2048,NULL,5,&Mido);
+xTaskCreate(&buzzer,"suena el buzzer",1024,NULL,5,NULL);
 TimerStart(timer_sensor.timer);
 }
 /*==================[end of file]============================================*/
