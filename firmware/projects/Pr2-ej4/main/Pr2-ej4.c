@@ -147,7 +147,7 @@ while(true)
 
 void app_main(void){
 	
-	    // Configuración de entrada analógica
+	// Configuración de entrada analógica
     analog_input_config_t config = {
         .input = CH1,
         .mode = ADC_SINGLE,

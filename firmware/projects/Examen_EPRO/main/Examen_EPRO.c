@@ -8,8 +8,14 @@
  *
  * | Periférico    | ESP32   |
  * |:-------------:|:-------:|
- * | Entrada A/D   | GPIO_0  |
- * | Salida D/A    | GPIO_1  |
+ * | Entrada A/D   | CH1     |
+ * | Entrada A/D   | CH2     |
+ * | SENSOR_TRIG   | GPIO_3  |
+ * | SENSOR_ECHO   | GPIO_2  |
+ * | LED_1         | GPIO_A  |
+ * | LED_2         | GPIO_B  |
+ * | LED_3         | GPIO_C  |
+ * | Buzzer        | GPIO_12 |
  *
  * @section changelog Historial de Cambios
  *
@@ -38,6 +44,7 @@
 #include "switch.h"
 #include "timer_mcu.h"
 #include "uart_mcu.h"
+#include "analog_io_mcu.h"
 /*==================[macros and definitions]=================================*/
 /**
  * @brief Valor de distancia medida por el sensor HC-SR04.
@@ -57,7 +64,7 @@ TaskHandle_t Mido = NULL;
 /**
  * @brief Handle para la tarea de muestra de distancia.
  */
-TaskHandle_t Muestro = NULL;
+TaskHandle_t Cabeza = NULL;
 
 /*==================[internal data definition]===============================*/
 
@@ -69,7 +76,14 @@ TaskHandle_t Muestro = NULL;
  * @param param Parámetro opcional (no utilizado en esta función).
  */
 void FuncTimerA(void* param){
-    vTaskNotifyGiveFromISR( Mido, pdFALSE);    /* Envía una notificación a la tarea asociada al LED_1 */
+    vTaskNotifyGiveFromISR( Mido, pdFALSE);    
+}
+
+/**
+ * @brief Función invocada en la interrupción del timer B
+*/
+void FuncTimerB(void* param){
+    vTaskNotifyGiveFromISR(Cabeza, pdFALSE);    
 }
 
 /**
@@ -104,7 +118,6 @@ void Leds()
  * 
  * Esta función lee continuamente la distancia del sensor y actualiza la variable `distancia`.
  * 
- * @param pvParameter Parámetro opcional (no se utiliza en esta función).
  */
 void medirdistancia(void *pvParameter)
 {
@@ -117,6 +130,11 @@ void medirdistancia(void *pvParameter)
 	}
 }
 
+
+/**
+ * @brief Tarea encargada en manejar la salida conectada al buzzer
+ * 
+ */
 void buzzer ()
 {	GPIOInit(GPIO_12,GPIO_OUTPUT);
 	while (true)
@@ -138,6 +156,10 @@ void buzzer ()
 	}
 }
 
+
+/**
+ * @brief Tarea encargada en notificar via Bt si esta un situacion de precaucion o peligro
+ */
 void notificacion ()
 {
 	while(true)
@@ -153,6 +175,40 @@ void notificacion ()
 	}
 }
 
+
+/**
+ * @brief Tarea encargada en notificar via Bt si la persona se cayo
+ */
+void sensorCabeza()
+{
+	uint16_t ejex; //genero las variables para guardar los datos de cada eje 
+	uint16_t ejey;
+	uint16_t ejez;
+
+	uint16_t ejexG; //genero las variables para realizar los calculos correspondientes  
+	uint16_t ejeyG;
+	uint16_t ejezG;
+
+	uint16_t total;	
+	while (true)
+	{
+		ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+		AnalogInputReadSingle(CH1,&ejex);
+		AnalogInputReadSingle(CH2,&ejey);
+		AnalogInputReadSingle(CH3,&ejez);
+
+		ejexG=0.3*ejex+1.65;
+		ejeyG=0.3*ejey+1.65;
+		ejezG=0.3*ejez+1.65;
+		total=ejexG+ejeyG+ejezG;
+
+		if(total>5)
+		{UartSendString(UART_CONNECTOR, "caida detectada");}
+
+	}
+	
+}
+
 /*==================[external functions definition]==========================*/
 void app_main(void){
 
@@ -164,6 +220,14 @@ void app_main(void){
 	};
 	TimerInit(&timer_sensor);
 	
+	timer_config_t timer_cabeza = {
+		.timer = TIMER_B,
+		.period = 10000,		//frecuencia de 100hz en 100000us
+		.func_p = FuncTimerB,
+		.param_p = NULL
+	};
+	TimerInit(&timer_cabeza);
+
 	serial_config_t Btexterno = 
 	{
 		.port = UART_CONNECTOR,
@@ -173,11 +237,43 @@ void app_main(void){
 	};
 	UartInit(&Btexterno);
 
+	// Configuración de entrada analógica
+    analog_input_config_t configejex = {
+        .input = CH1,
+        .mode = ADC_SINGLE,
+        .func_p = NULL,
+        .param_p = NULL,
+        .sample_frec = 0
+    };
+    AnalogInputInit(&configejex);
 
+	// Configuración de entrada analógica
+    analog_input_config_t configejey = {
+        .input = CH2,
+        .mode = ADC_SINGLE,
+        .func_p = NULL,
+        .param_p = NULL,
+        .sample_frec = 0
+    };
+    AnalogInputInit(&configejey);
+
+		// Configuración de entrada analógica
+    analog_input_config_t configejez = {
+        .input = CH3,
+        .mode = ADC_SINGLE,
+        .func_p = NULL,
+        .param_p = NULL,
+        .sample_frec = 0
+    };
+    AnalogInputInit(&configejez);
+
+LedsInit();
 HcSr04Init(GPIO_3, GPIO_2);
 xTaskCreate(&medirdistancia, "mide",2048,NULL,5,&Mido);
 xTaskCreate(&buzzer,"suena el buzzer",1024,NULL,5,NULL);
 xTaskCreate(&notificacion,"notifica",1024,&Btexterno,5,NULL);
+xTaskCreate(&sensorCabeza,"notifica",2048,&Btexterno,5,&Cabeza);
 TimerStart(timer_sensor.timer);
+TimerStart(timer_cabeza.timer);
 }
 /*==================[end of file]============================================*/
