@@ -100,33 +100,35 @@ void cambioEstado(void *param)
 }
 
 void motorpaso(gpioConf_t *arreglo)
-{
-	{	if (giro==true)
-		{
-			if (angulo>330)
-			{		for (int i = 0; i < 119; i++) //
-				{
-					GPIOOn(arreglo[0].pin);	
-					GPIOOff(arreglo[1].pin);
-					vTaskDelay(500 / portTICK_PERIOD_MS);
-					GPIOOff(arreglo[0].pin);	
-				}	}
-			else 
-			{ 
-				for (int i = 0; i < 17; i++) //cantidad de pasos necesarios para que el motor gire 30 grados en ese periodo de tiempo 
-				{
-					GPIOOn(arreglo[0].pin);	//cmabio el estado logico de la salida del motor
-					GPIOOn(arreglo[1].pin); //seleccionio el modo de giro contrario a la aguja del reloj 
-					vTaskDelay(500 / portTICK_PERIOD_MS); //velocidad de giro
-					GPIOOff(arreglo[0].pin); //cambio el estado de la salida del motor
-				}	
-			angulo = angulo + 30;
+{while(1)
+	{		
+	ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+		{	if (giro==true)
+			{
+				if (arreglo[2].pin==false)
+				{		for (int i = 0; i < 119; i++) //
+					{
+						GPIOOn(arreglo[0].pin);	
+						GPIOOff(arreglo[1].pin);
+						vTaskDelay(500 / portTICK_PERIOD_MS);
+						GPIOOff(arreglo[0].pin);	
+					}	}
+				else 
+				{ 
+					for (int i = 0; i < 17; i++) //cantidad de pasos necesarios para que el motor gire 30 grados en ese periodo de tiempo 
+					{
+						GPIOOn(arreglo[0].pin);	//cmabio el estado logico de la salida del motor
+						GPIOOn(arreglo[1].pin); //seleccionio el modo de giro contrario a la aguja del reloj 
+						vTaskDelay(500 / portTICK_PERIOD_MS); //velocidad de giro
+						GPIOOff(arreglo[0].pin); //cambio el estado de la salida del motor
+					}	
+				angulo = angulo + 30;
+				}
 			}
+			giro=!giro;
 		}
-		giro=!giro;
 	}
 }
-
 
 /*==================[external functions definition]==========================*/
 
@@ -154,9 +156,10 @@ void app_main(void)
 		{
 			{GPIO_2,GPIO_OUTPUT}, //pin de cantidad de pasos del motor
 			{GPIO_3,GPIO_OUTPUT}, //pin de direccionamiento del motor
+			{GPIO_1,GPIO_INPUT},  //pin fin de carrera
 		};
 
-	for (int i = 0; i<2; i++)
+	for (int i = 0; i<3; i++)
 		{
 			GPIOInit(arreglo[i].pin, arreglo[i].dir);
 		}
