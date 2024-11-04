@@ -45,6 +45,11 @@
 uint32_t distancia = 0;
 
 /**
+ * @brief Valor de distancia convertida de cm a m.
+ */
+uint16_t distancia_referencia=0;
+
+/**
  * @brief Handle para la tarea de medición de distancia.
  */
 TaskHandle_t Mido = NULL;
@@ -70,11 +75,10 @@ void FuncTimerA(void* param){
 /**
  * @brief Controla el estado de los LEDs en función de la distancia medida.
  * 
- * Esta función enciende o apaga los LEDs basándose en el valor de `distancia`.
+ * Esta función enciende o apaga los LEDs basándose en el valor de `distancia_referencia `.
  */
 void Leds()
 {
-	uint16_t distancia_referencia=distancia/100; //paso la unida de cm a m
 	if (distancia_referencia > 5)
 	{
 		LedOn(LED_1);	//solo enciendo el led verde 
@@ -108,26 +112,44 @@ void medirdistancia(void *pvParameter)
 	{
 		ulTaskNotifyTake(pdTRUE, portMAX_DELAY); 
 		distancia=HcSr04ReadDistanceInCentimeters();
+		distancia_referencia=distancia/100; //paso la unida de cm a m
 		Leds();
 	}
 }
 
 void buzzer ()
-{
-	GPIOInit(GPIO_12,GPIO_OUTPUT);
-		if (distancia <= 5 && distancia > 3)	//suena el buzzer a una frecuencia de 1s
+{	GPIOInit(GPIO_12,GPIO_OUTPUT);
+	while (true)
 	{
-		GPIOOn(GPIO_12);
-		vTaskDelay(1000 / portTICK_PERIOD_MS);	
-		GPIOOff(GPIO_12);
-		vTaskDelay(1000 / portTICK_PERIOD_MS);	
+		if (distancia_referencia <= 5 && distancia_referencia > 3)	//suena el buzzer a una frecuencia de 1s
+		{
+			GPIOOn(GPIO_12);
+			vTaskDelay(1000 / portTICK_PERIOD_MS);	
+			GPIOOff(GPIO_12);
+			vTaskDelay(1000 / portTICK_PERIOD_MS);	
+			}
+		if (distancia_referencia <= 3)							//suena el buzzer a una frecuencia de 0,5s
+		{
+			GPIOOn(GPIO_12);
+			vTaskDelay(500 / portTICK_PERIOD_MS);	
+			GPIOOff(GPIO_12);
+			vTaskDelay(500 / portTICK_PERIOD_MS);	
 		}
-	if (distancia <= 3)							//suena el buzzer a una frecuencia de 0,5s
+	}
+}
+
+void notificacion ()
+{
+	while(true)
 	{
-		GPIOOn(GPIO_12);
-		vTaskDelay(500 / portTICK_PERIOD_MS);	
-		GPIOOff(GPIO_12);
-		vTaskDelay(500 / portTICK_PERIOD_MS);	
+		if (distancia_referencia <= 5 && distancia_referencia > 3)	//envio notificacion de precaucion
+		{
+			UartSendString(UART_CONNECTOR, "Precaución, vehículo cerca");
+		}
+		if (distancia_referencia <= 3)							//envio notificacion de peligro
+		{
+			UartSendString(UART_CONNECTOR, "Peligro, vehículo cerca");
+		}
 	}
 }
 
@@ -141,12 +163,21 @@ void app_main(void){
 		.param_p = NULL
 	};
 	TimerInit(&timer_sensor);
-
 	
+	serial_config_t Btexterno = 
+	{
+		.port = UART_CONNECTOR,
+		.baud_rate = 9600,
+		.func_p = NULL,
+		.param_p = NULL,
+	};
+	UartInit(&Btexterno);
+
 
 HcSr04Init(GPIO_3, GPIO_2);
 xTaskCreate(&medirdistancia, "mide",2048,NULL,5,&Mido);
 xTaskCreate(&buzzer,"suena el buzzer",1024,NULL,5,NULL);
+xTaskCreate(&notificacion,"notifica",1024,&Btexterno,5,NULL);
 TimerStart(timer_sensor.timer);
 }
 /*==================[end of file]============================================*/
